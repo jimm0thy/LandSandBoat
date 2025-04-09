@@ -21,7 +21,7 @@ CREATE TABLE `accounts_parties` (
   `partyid` int(10) unsigned NOT NULL DEFAULT '0',
   `partyflag` smallint(5) unsigned NOT NULL DEFAULT '0',
   `allianceid` int(10) unsigned NOT NULL DEFAULT '0',
-  `timestamp` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `timestamp` TIMESTAMP DEFAULT (now()),
   PRIMARY KEY (`charid`),
   FOREIGN KEY (`charid`) REFERENCES accounts_sessions(`charid`)
     ON DELETE CASCADE

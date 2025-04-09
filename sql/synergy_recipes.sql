@@ -33,7 +33,7 @@ CREATE TABLE `synergy_recipes` (
   `resultHQ3Qty` tinyint(2) unsigned NOT NULL,
   `resultName` tinytext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=Aria TRANSACTIONAL=0 AUTO_INCREMENT=3500 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3500 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Variables
 SET @SKILL_SYNERGY      = 0;

@@ -754,7 +754,7 @@ namespace charutils
         }
 
         // TODO: LoadFromCharSkillsSQL
-        fmtQuery = "SELECT skillid, value, rank "
+        fmtQuery = "SELECT skillid, value, char_skills.rank "
                    "FROM char_skills "
                    "WHERE charid = (?)";
 
@@ -5863,8 +5863,8 @@ namespace charutils
                             "charid = %u,"
                             "skillid = %u,"
                             "value = %u,"
-                            "rank = %u "
-                            "ON DUPLICATE KEY UPDATE value = %u, rank = %u";
+                            "char_skills.rank = %u "
+                            "ON DUPLICATE KEY UPDATE value = %u, char_skills.rank = %u";
 
         _sql->Query(Query, PChar->id, SkillID, PChar->RealSkills.skill[SkillID], PChar->RealSkills.rank[SkillID], PChar->RealSkills.skill[SkillID],
                     PChar->RealSkills.rank[SkillID]);

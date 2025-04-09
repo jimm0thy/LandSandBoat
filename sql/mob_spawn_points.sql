@@ -14,7 +14,7 @@ CREATE TABLE `mob_spawn_points` (
   `pos_z` float(7,3) NOT NULL DEFAULT '0',
   `pos_rot` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`mobid`)
-) ENGINE=Aria TRANSACTIONAL=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AVG_ROW_LENGTH=33;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AVG_ROW_LENGTH=33;
 
 -- ----------------------------
 -- Records of mob_spawn_points

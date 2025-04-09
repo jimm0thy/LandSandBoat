@@ -1,3 +1,4 @@
+
 # Internal Deps
 import os
 import subprocess
@@ -57,8 +58,9 @@ if (
 
 # External Deps (requirements.txt)
 try:
-    import mariadb
-    from mariadb.constants import *
+    import mysql.connector
+    from mysql.connector import *
+    from mysql.connector import errorcode
     from git import Repo
     import yaml
     import colorama
@@ -493,17 +495,17 @@ def import_file(file):
 def connect():
     global db, cur
     try:
-        db = mariadb.connect(
+        db = mysql.connector.connect(
             host=host, user=login, passwd=password, db=database, port=port
         )
         cur = db.cursor()
-    except mariadb.Error as err:
-        if err.errno == mariadb.constants.ERR.ER_ACCESS_DENIED_ERROR:
+    except mysql.connector.Error as err:
+        if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
             print_red(
                 "Incorrect mysql_login or mysql_password, update settings/network.lua."
             )
             quit()
-        elif err.errno == mariadb.constants.ERR.ER_BAD_DB_ERROR:
+        elif err.errno == errorcode.ER_BAD_DB_ERROR:
             print_red("Database " + database + " does not exist.")
             if (
                 input(

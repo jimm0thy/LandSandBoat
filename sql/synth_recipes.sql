@@ -48,7 +48,7 @@ CREATE TABLE `synth_recipes` (
   `ResultName` tinytext NOT NULL,
   `content_tag` varchar(14) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=Aria TRANSACTIONAL=0 AUTO_INCREMENT=3500 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AVG_ROW_LENGTH=79;
+) ENGINE=InnoDB AUTO_INCREMENT=3500 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AVG_ROW_LENGTH=79;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 DELIMITER $$

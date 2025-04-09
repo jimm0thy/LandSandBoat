@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `pet_list` (
   `element` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `damageType` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`petid`)
-) ENGINE=Aria TRANSACTIONAL=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Contenu de la table `pet_list`

@@ -37,7 +37,7 @@ CREATE TABLE `npc_list` (
   `content_tag` varchar(14) DEFAULT NULL,
   `widescan` tinyint(3) unsigned NOT NULL DEFAULT 1,
   PRIMARY KEY (`npcid`)
-) ENGINE=Aria TRANSACTIONAL=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AVG_ROW_LENGTH=70 PACK_KEYS=1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AVG_ROW_LENGTH=70 PACK_KEYS=1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

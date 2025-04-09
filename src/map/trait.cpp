@@ -54,10 +54,10 @@ namespace traits
      ************************************************************************/
     void LoadTraitsList()
     {
-        const char* Query = "SELECT traitid, job, level, rank, modifier, value, content_tag, meritid "
+        const char* Query = "SELECT traitid, job, level, traits.rank, modifier, value, content_tag, meritid "
                             "FROM traits "
                             "WHERE traitid < %u "
-                            "ORDER BY job, traitid ASC, rank DESC";
+                            "ORDER BY job, traitid ASC, traits.rank DESC";
 
         int32 ret = _sql->Query(Query, MAX_TRAIT_ID);
 
